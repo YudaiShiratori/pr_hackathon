@@ -1,2 +1,249 @@
 @charset 'utf-8';
 
+/* reset */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* custom */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, video {
+  max-width: 100%;
+}
+
+img {
+  border-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: "";
+}
+
+
+/* common */
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+.header {
+  height: 64px;
+  background: #294C7A;
+}
+.header h1 {
+  font-size: 24px;
+  line-height: 32px;
+  padding: 16px 0;
+}
+.header h1 a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* nav */
+.nav {
+  background: #fafafa;
+  margin-bottom: 8px;
+}
+.nav ul {
+  display: flex;
+  overflow-x: scroll;
+  padding: 16px 0;
+}
+.nav ul li {
+  border: 1px solid #294C7A;
+  border-radius: 1em;
+  overflow: hidden;
+  min-width: 100px;
+}
+.nav ul li:first-child {
+  margin-left: 40px;
+}
+.nav ul li:last-child {
+  margin-right: 40px;
+}
+.nav ul li + li {
+  margin-left: 8px;
+}
+.nav ul li a {
+  text-decoration: none;
+  display: block;
+  color: #294C7A;
+  line-height: 2;
+  padding: 0 .5em;
+  text-align: center;
+}
+.nav ul li a:hover {
+  background: #294C7A;
+  color: white;
+  transition: .2s;
+}
+
+/* main */
+.main {
+  margin: 0 8px;
+}
+
+/* tile */
+.tile {
+  column-count: 3;
+  column-gap: 8px;
+}
+.tile__item {
+  margin-bottom: 8px;
+}
+.tile__item a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+.tile__item img {
+  display: block;
+}
+.tile__item h1 {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  opacity: 0;
+}
+.tile__item:hover h1 {
+  transition: .3s;
+  opacity: 1;
+}
+.tile__item:hover img {
+  transition: .3s;
+  opacity: 0.8;
+}
+
+/* footer */
+.footer {
+  padding: 8px 0;
+  background: #fafafa;
+  margin-top: 16px;
+}
+.copyright {
+  color: #888;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+}

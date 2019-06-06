@@ -10,8 +10,7 @@
     function f() {
         get_need_response('GET', 'https://9b199e13.prtimes.tech/movies/3', 'data', null, function (choice_data) {
             // onsole.log(choice_data[0].company_id);
-            console.log(choice_data);
-            console.log(JSON.parse(choice_data))
+            console.log(choice_data[0].company_id, choice_data[0].title, choice_data[0].main_image);
         });
     }
 </script>

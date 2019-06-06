@@ -1,4 +1,4 @@
-function get_need_response(method, endpoint, key, parameters, callback) {
+function response(method, endpoint, key, parameters, callback) {
     // XMLHttpRequestコンストラクタを作成
     var request = new XMLHttpRequest();
 
@@ -46,13 +46,12 @@ function get_need_response(method, endpoint, key, parameters, callback) {
             console.log(response_from_database);
         } else if (key === '') {
             console.log(response_from_database);
-            // コールバック関数
+            // コールバック
             callback(response_from_database);
         } else {
-            var choice_data = response_from_database[key];
-            console.log(choice_data);
-            // コールバック関数
-            callback(choice_data);
+            console.log(response_from_database[key]);
+            // コールバック
+            callback(response_from_database[key]);
         }
 
     };

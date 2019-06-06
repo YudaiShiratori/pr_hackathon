@@ -9,16 +9,16 @@
 <script>
     var red = '\u001b[31m';
 
-    function f() {
-        apiResponse('GET', 'https://9b199e13.prtimes.tech/detail/43355/3', 'data', null, function (response_data) {
-            console.log("response_data.company_id: " + red + response_data.company_name);
-            console.log("response_data.title: " + red + response_data.title);
-            console.log("response_data.main_image: " + red + response_data.main_image);
-            console.log("response_data.created_at: " + red + response_data.created_at);
-            console.log("response_data.body: " + red + response_data.body);
-        });
-    }
+
+    apiResponse('GET', 'https://9b199e13.prtimes.tech/detail/43355/3', 'data', null, function (response_data) {
+        console.log("response_data.company_id: " + red + response_data.company_name);
+        console.log("response_data.title: " + red + response_data.title);
+        console.log("response_data.main_image: " + red + response_data.main_image);
+        console.log("response_data.created_at: " + red + response_data.created_at);
+        console.log("response_data.body: " + red + response_data.body);
+
+    });
 </script>
-<button type="button" onclick="f()"></button>
+
 </body>
 </html>

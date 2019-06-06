@@ -1,7 +1,5 @@
 <template>
   <div class="comment">
-    <br>
-    <br>
     <div class="card">
       <p>このアイデアを実現するには? アドバイス一覧</p>
       <div class="card-content">
@@ -13,10 +11,10 @@
           </li>
         </ul>
       </div>
-      <br>
       <div class="card-action">
         <v-flex xs12 sm12>
           <v-form>
+            <p>ssss</p>
             <v-container>
               <v-flex xs12 sm6 md3>
                 <v-textarea

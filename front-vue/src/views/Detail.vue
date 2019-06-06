@@ -1,20 +1,44 @@
 <template>
   <div class="detail">
-    <p>aaaaa</p>
-    <Comment />
+    <section class="entry">
+      <header>
+        <img src="https://via.placeholder.com/800x400" alt="記事タイトル">
+        <h1>記事タイトル</h1>
+      </header>
+      <section class="entry__content">
+        <p>
+          こんにちは。私達はこんなことをします。よろしくおねがいします。こんにちは。私達はこんなことをします。よろしくおねがいします。こんにちは。私達はこんなことをします。よろしくおねがいします。こんにちは。私達はこんなことをします。よろしくおねがいします。こんにちは。私達はこんなことをします。よろしくおねがいします。こんにちは。私達はこんなことをします。よろしくおねがいします。こんにちは。私達はこんなことをします。よろしくおねがいします。こんにちは。私達はこんなことをします。よろしくおねがいします。こんにちは。私達はこんなことをします。よろしくおねがいします。
+        </p>
+      </section>
+    </section>
+
+    <section class="comment">
+      <h1>コメント</h1>
+      <ul v-for="message in messages" :key="message.id">
+        <li>{{ message.content }}</li>
+      </ul>
+      <form action="">
+        <label>内容
+          <input type="text">
+        </label>
+        <button>送信</button>
+      </form>
+    </section>
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import Comment from '../components/Comment.vue'; // @ is an alias to /src
+<script>
+import axios from 'axios'
 
-@Component({
-  components: {
-    Comment,
+export default {
+  name: 'detail',
+  data() {
+    return {}
   },
-})
-
-export default class Detail extends Vue {}
+  created () {
+    axios.get('http://192.168.130.151:777').then(response => {
+      console.log(response.data)
+    })
+  }
+}
 </script>
-

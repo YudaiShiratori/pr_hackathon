@@ -1,6 +1,16 @@
 <template>
   <div id="app">
+    <header class="header">
+      <div class="container">
+        <h1><a href="#">POP TIMES</a></h1>
+      </div>
+    </header>
     <router-view/>
+    <footer class="footer">
+      <div class="container">
+        <small class="copyright">&copy; POP TIMES</small>
+      </div>
+    </footer>
   </div>
 </template>
 <style lang="stylus">

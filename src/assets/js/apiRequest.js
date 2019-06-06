@@ -2,7 +2,7 @@ function apiResponse(method, endpoint, key, parameters, callback) {
     // XMLHttpRequestコンストラクタを作成
     var request = new XMLHttpRequest();
 
-    // ハンドラーの登録
+    // ハンドラー
     request.onreadystatechange = function () {
         switch(request.readyState) {
             case 0:
@@ -27,6 +27,7 @@ function apiResponse(method, endpoint, key, parameters, callback) {
                     var response_data = this.response;
                     if (key === '') {
                         console.log("Complete!!\n" + response_data);
+                        console.log(response_data);
                         callback(response_data);
                     } else {
                         console.log("Complete!!\n" + response_data[key]);
@@ -48,4 +49,3 @@ function apiResponse(method, endpoint, key, parameters, callback) {
     // Httpリクエストを送信(引数指定で特定の情報のみを送信)
     request.send(parameters);
 }
-

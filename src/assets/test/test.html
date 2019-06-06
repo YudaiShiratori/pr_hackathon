@@ -7,9 +7,13 @@
 </head>
 <body>
 <script>
+    var red = '\u001b[31m';
+
     function f() {
-        apiResponse('GET', 'https://9b199e13.prtimes.tech/movies/3', 'data', null, function (response_data) {
-            console.log(response_data[0].company_id, response_data[0].title, response_data[0].main_image);
+        apiResponse('GET', 'https://9b199e13.prtimes.tech/movies/5', 'data', null, function (response_data) {
+            console.log("response_data[0].company_id: " + red + response_data[0].company_id);
+            console.log("response_data[4].title: " + red + response_data[4].title);
+            console.log("response_data[0].main_image: " + red + response_data[0].main_image);
         });
     }
 </script>

@@ -26,11 +26,12 @@ function apiResponse(method, endpoint, key, parameters, callback) {
                 if (request.status == 200 || request.status === 304) {
                     var response_data = this.response;
                     if (key === '') {
-                        console.log("Complete!!\n" + response_data);
+                        console.log("Complete!!\n");
                         console.log(response_data);
                         callback(response_data);
                     } else {
-                        console.log("Complete!!\n" + response_data[key]);
+                        console.log("Complete!!\n");
+                        console.log(response_data[key]);
                         // コールバック
                         callback(response_data[key]);
                     }

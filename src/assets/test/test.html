@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../js/GETapiRequest.js"></script>
+    <script src="../js/apiRequest.js"></script>
 </head>
 <body>
 <script>
     function f() {
-        get_need_response('GET', 'https://9b199e13.prtimes.tech/movies/1', 'data["company_id"]', null, function (choice_data) {
+        get_need_response('GET', 'https://9b199e13.prtimes.tech/movies/3', 'data', null, function (choice_data) {
+            // onsole.log(choice_data[0].company_id);
             console.log(choice_data);
-
+            console.log(JSON.parse(choice_data))
         });
     }
 </script>
+<button type="button" onclick="f()"></button>
 </body>
 </html>

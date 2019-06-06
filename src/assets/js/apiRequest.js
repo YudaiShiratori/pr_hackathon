@@ -23,7 +23,7 @@ function apiResponse(method, endpoint, key, parameters, callback) {
                 break;
             case 4:
                 // データ受信完了
-                if (request.status == 200 || request.status === 304) {
+                if (request.status == 200) {
                     var response_data = this.response;
                     if (key === '') {
                         console.log("Complete!!\n");

@@ -10,10 +10,11 @@
     var red = '\u001b[31m';
 
     function f() {
-        apiResponse('GET', 'https://9b199e13.prtimes.tech/movies/5', 'data', null, function (response_data) {
-            console.log("response_data[0].company_id: " + red + response_data[0].company_id);
+        apiResponse('GET', 'https://9b199e13.prtimes.tech/detail/1/1', 'data', null, function (response_data) {
+            console.log("response_data[0].company_id: " + red + response_data[0].company_name);
             console.log("response_data[4].title: " + red + response_data[4].title);
             console.log("response_data[0].main_image: " + red + response_data[0].main_image);
+            console.log("response_data[0].main_image: " + red + response_data[0].created_at);
         });
     }
 </script>

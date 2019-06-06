@@ -36,7 +36,7 @@ function apiResponse(method, endpoint, key, parameters, callback) {
                         callback(response_data[key]);
                     }
                 } else {
-                    console.log( 'Failed. HttpStatus: ' + request.statusText)
+                    console.log('Failed. HttpStatus: ' + request.statusText)
                 }
                 break;
         }

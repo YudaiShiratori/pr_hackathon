@@ -1,5 +1,10 @@
 <template>
   <div class="detail">
+    <header class="header">
+      <div class="container">
+        <h1><a href="#">POP TIMES</a></h1>
+      </div>
+    </header>
     <section class="entry">
       <header>
         <img src="https://via.placeholder.com/800x400" alt="記事タイトル">
@@ -33,12 +38,17 @@ import axios from 'axios'
 export default {
   name: 'detail',
   data() {
-    return {}
+    return {
+      messages: []
+    }
   },
   created () {
-    axios.get('http://192.168.130.151:777').then(response => {
-      console.log(response.data)
+    axios.get('https://jsonplaceholder.typicode.com/todos/1').then(response => {
+      console.log(response);
+      this.messages = response.data;
+    }).catch(error => {
+      console.error(error);
     })
-  }
+  },
 }
 </script>

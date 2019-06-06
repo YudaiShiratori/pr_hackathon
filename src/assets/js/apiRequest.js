@@ -44,7 +44,7 @@ function apiResponse(method, endpoint, key, parameters, callback) {
 
     // Httpリクエストに必要な情報
     request.open(method, endpoint, true);
-    request.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+    request.setRequestHeader('content-type', 'application/json');
     request.responseType = 'json';
 
     // Httpリクエストを送信(引数指定で特定の情報のみを送信)

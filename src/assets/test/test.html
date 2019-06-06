@@ -8,9 +8,8 @@
 <body>
 <script>
     function f() {
-        get_need_response('GET', 'https://9b199e13.prtimes.tech/movies/3', 'data', null, function (choice_data) {
-            // onsole.log(choice_data[0].company_id);
-            console.log(choice_data[0].company_id, choice_data[0].title, choice_data[0].main_image);
+        apiResponse('GET', 'https://9b199e13.prtimes.tech/movies/3', 'data', null, function (response_data) {
+            console.log(response_data[0].company_id, response_data[0].title, response_data[0].main_image);
         });
     }
 </script>
